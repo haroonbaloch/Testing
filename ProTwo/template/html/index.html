@@ -6,8 +6,25 @@
     <title>Testing</title>
     <link rel="stylesheet" href="{% static "css/mystyle.css"%}"/>
     </head>
-  <body>
-    <h1>Hi we are just testing</h1>
-    {{temptag}}
-  </body>
+    <body>
+      <h1>Information of Users List</h1>
+      {%if temptag%}
+      <ol>
+
+
+        {%for acc in temptag %}
+        <li>User Info</li>
+        <ul>
+
+        <li>First Name: {{acc.f_name}}</li>
+        <li>Last Name: {{acc.l_name}}</li>
+        <li>Email Name: {{acc.email}}</li>
+
+          </ul>
+          {%endfor%}
+      </ol>
+        {%else%}
+        <p>not woring</p>
+        {%endif%}
+    </body>
 </html>
