@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Color</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/styles.min.css"%}"/>
+</head>
+
+<body>
+    <section id="section">
+        <div>
+            <h1 class="text-center">Color Blind Test</h1>
+        </div>
+        <div>
+            <div class="container" style="margin-top: 29px;">
+                <div class="row">
+                    <div class="col-xl-4 offset-xl-2">
+                      <form method="POST">
+                        {{form.as_table}}
+                        {%csrf_token%}
+
+                      </form>
+                    </div>
+                    <div class="col-xl-3 offset-xl-0"><img src="{% static "img/Ishihara-Plate-01-38.jpg"%}"/></div>
+                </div>
+            </div>
+            <div class="container" style="margin-top: 29px;">
+                <div class="row">
+                    <div class="col-xl-4 offset-xl-2">
+                      <form method="POST">
+                        {{form.as_p}}
+                        {%csrf_token%}
+
+                      </form>
+                    </div>
+                    <div class="col-xl-3 offset-xl-0"><img src="{% static "img/Ishihara-Plate-02-38.jpg"%}"/></div>
+                </div>
+            </div>
+            <div class="container" style="margin-top: 29px;">
+                <div class="row">
+                    <div class="col-xl-4 offset-xl-2">
+                      <form method="POST">
+                        {{form.as_p}}
+                        {%csrf_token%}
+
+                      </form>
+                    <div class="col-xl-3 offset-xl-0"><img src="{% static "img/Ishihara-Plate-03-38.jpg"%}"/></div>
+                </div>
+            </div>
+            <div class="container" style="margin-top: 29px;">
+                <form>
+                  <input type="submit" class='btn btn-primay' value="Submit">
+                  </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
